@@ -1,0 +1,2 @@
+C:\Users\kenzh\source\repos\tanym\tanym\obj\Debug\tanym.esproj.SuggestedBindingRedirects.cache
+C:\Users\kenzh\source\repos\tanym\tanym\obj\Debug\tanym.esproj.CoreCompileInputs.cache
