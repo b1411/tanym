@@ -136,16 +136,15 @@ p {
 }
 
 .header {
-    height: 70vh;
+    // height: 70vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
     .grid-tittle {
         h1 {
-            font-size: clamp(2rem, 3vw, 3rem);
+            font-size: clamp(1.5rem, 1000vw, 3rem);
             font-weight: 600;
             line-height: 1.2;
             color: #fff;
@@ -223,6 +222,10 @@ p {
             }
         }
     }
+}
+
+.non-visible {
+    display: none!important;
 }
 
 .section-regular {
@@ -425,7 +428,7 @@ p {
 
 .section-partnership {
     padding: 100px 5%;
-    // display: none !important;
+    display: none !important;
 
     .partnership-list {
         margin-top: 100px;

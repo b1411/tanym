@@ -3,19 +3,23 @@ import Parse from "parse/dist/parse.min.js";
 import Navbar from "../Navbar/Navbar.js";
 import Footer from "../Footer/Footer.js";
 import { Link } from "react-router-dom";
+import Preloader from "../Preloader/Preloader.jsx";
 
 function Events() {
   const [events, setEvents] = useState([]);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const query = new Parse.Query("Events");
     query.find().then((results) => {
       setEvents(results);
+      setLoaded(true);
     });
   }, []);
 
   return (
-    <>
+    loaded ? (
+      <>
       <Navbar />
       <div className="events-container">
         {events.map((event, index) => (
@@ -40,6 +44,7 @@ function Events() {
       </div>
       <Footer />
     </>
+    ) : <Preloader/>
   );
 }
 
